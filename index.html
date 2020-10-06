@@ -12,45 +12,45 @@
     let userAge = +prompt('Enter your age');
 
 
-            function parseUserData() {
-                if (isNaN(userAge) || userName == "") {
-                    alert('введите корректные данные')
-                    let userName = prompt('Enter your name', 'John');
-                    let userAge = +prompt('Enter your age', 17);
-                    if (userAge < 18) {
-                        alert('You are not allowed to visit this website');
-                    } else if (userAge == 18 || userAge <= 22) {
-                        let question = confirm('Are you sure you want to continue?');
-                        if (question == true) {
-                            alert('Welcome, ' + userName);
-                        } else {
-                            alert('You are not allowed to visit this website');
-                        }
-                    } else if (userAge > 22) {
-                        alert('Welcome, ' + userName);
-                    }
+    function parseUserData() {
+        if (isNaN(userAge) || userName === "") {
+            alert('введите корректные данные')
+            let userName = prompt('Enter your name', 'John');
+            let userAge = +prompt('Enter your age', '17');
+            if (userAge < 18) {
+                alert('You are not allowed to visit this website');
+            } else if (userAge === 18 || userAge <= 22) {
+                let question = confirm('Are you sure you want to continue?');
+                if (question === true) {
+                    alert('Welcome, ' + userName);
                 } else {
-                    if (userAge < 18) {
-                        alert('You are not allowed to visit this website');
-                    } else if (userAge == 18 || userAge <= 22) {
-                        let question = confirm('Are you sure you want to continue?');
-                        if (question == true) {
-                            alert('Welcome, ' + userName);
-                        } else {
-                            alert('You are not allowed to visit this website');
-                        }
-                    } else if (userAge > 22) {
-                        alert('Welcome, ' + userName);
-                    }
+                    alert('You are not allowed to visit this website');
                 }
-
+            } else if (userAge > 22) {
+                alert('Welcome, ' + userName);
             }
-            parseUserData();
+        } else {
+            if (userAge < 18) {
+                alert('You are not allowed to visit this website');
+            } else if (userAge === 18 || userAge <= 22) {
+                let question = confirm('Are you sure you want to continue?');
+                if (question === true) {
+                    alert('Welcome, ' + userName);
+                } else {
+                    alert('You are not allowed to visit this website');
+                }
+            } else if (userAge > 22) {
+                alert('Welcome, ' + userName);
+            }
+        }
+
+    }
+    parseUserData();
 
 
 
 
-   console.log(isNaN(userAge));
+    console.log(isNaN(userAge));
 
 
 
